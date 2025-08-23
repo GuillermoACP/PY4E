@@ -2,19 +2,25 @@
 Ejercicio 1: Escribe un programa que lea repetidamente números hasta que el usuario introduzca “fin”. Una vez se haya introducido “fin”, muestra por pantalla el total, la cantidad de números y la media de esos números. Si el usuario introduce cualquier otra cosa que no sea un número, detecta su fallo usando try y except, muestra un mensaje de error y pasa al número siguiente.
 '''
 
-def contador(numeros):
+def pedir_numeros():
+    contador = 0
+    suma = 0
     while True:
-        suma = 0.0
-        num_total = 0
-        return numeros
-    
+        entrada = input('Numero: ')
+        
+        if entrada.lower() == 'fin':
+            break
+        try:    
+            numero = float(entrada)
+            suma = suma + numero
+            contador = contador + 1
+            media = suma / contador
+        except ValueError:
+            print('Introduzca un numero')
 
+    print(suma, contador, media)
 
-num = float(input('Introduce un numero: '))
-x = contador(num)
-print(x)
-
-
+pedir_numeros()
 
 
 
