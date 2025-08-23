@@ -6,7 +6,7 @@ def pedir_numeros():
     contador = 0
     suma = 0
     while True:
-        entrada = input('Numero: ')
+        entrada = input('Introduzca un número: ')
         
         if entrada.lower() == 'fin':
             break
@@ -16,9 +16,9 @@ def pedir_numeros():
             contador = contador + 1
             media = suma / contador
         except ValueError:
-            print('Introduzca un numero')
+            print('Entrada inválida')
 
-    print(suma, contador, media)
+    print(f'Suma:{suma}, Contador:{contador}, Media:{media}')
 
 pedir_numeros()
 
